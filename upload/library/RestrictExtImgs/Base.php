@@ -45,7 +45,7 @@ class RestrictExtImgs_Base extends XFCP_RestrictExtImgs_Base {
         $whitelist[] = parse_url($opts->boardUrl)['host'];
         return $whitelist;
     }
-    protected function getImageHost(tag) {
+    protected function getImageHost($tag) {
         $elements = parse_url($tag['children'][0]);
         if (isset($elements['host'])) {
             return $elements['host'];
